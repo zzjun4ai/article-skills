@@ -1,6 +1,9 @@
-# Agent Skill Repository Template
+# Scientific Skills
 
-A small, production-oriented template for building portable Agent Skills. It combines a standards-first `SKILL.md` layout, progressive disclosure, executable validation, and a working reference skill.
+This repository contains portable, production-oriented agent skills for scientific
+workflows. The current published skill is `data-to-nature-figure`, an evidence-led
+workflow that profiles tabular data, recommends defensible charts, creates a
+traceable data-to-figure contract, and checks Nature-family figure delivery.
 
 ## Repository layout
 
@@ -21,7 +24,17 @@ Each skill must keep its required entrypoint at `skills/<name>/SKILL.md`. Option
 - Match prescriptiveness to risk and state scope boundaries.
 - Run the same checks locally and in CI.
 
-See `AGENTS.md` for authoring rules and `skills/example-workflow` for a complete, runnable example.
+## Validate
+
+Run the skill checks from the repository root:
+
+```sh
+make check
+```
+
+See `AGENTS.md` for authoring rules and
+[`skills/data-to-nature-figure/SKILL.md`](skills/data-to-nature-figure/SKILL.md)
+for the complete workflow.
 
 ## License
 

@@ -1,0 +1,52 @@
+# Copy beside each figure and fill before final export.
+figure_id: "Fig_1"
+target: "Nature-family baseline"
+backend: "python-matplotlib"
+claim: ""
+archetype: "quantitative grid"
+final_display:
+  width_mm: null
+  font_family: "Arial or Helvetica-compatible"
+  minimum_font_pt: 5
+  maximum_font_pt: 8
+inputs:
+  raw: []
+  tidy: []
+  derived: []
+  scripts: []
+data_profile:
+  report_path: ""
+  identifier_columns_confirmed: []
+  group_size_notes: ""
+data_decisions:
+  outcome_and_units: ""
+  inclusion_exclusion: ""
+  missing_outlier_qc: ""
+  normalization_aggregation: ""
+  replicate_definition: ""
+  statistics: ""
+panels: []
+colour:
+  semantic_mapping: ""
+  palette: ""
+  grayscale_checked: false
+  cvd_checked: false
+image_integrity:
+  primary_images_used: false
+  edits_or_crops: "not applicable"
+exports:
+  vector_master: ""
+  vector_formats: ["pdf", "svg"]
+  editable_text_checked: false
+  selectively_rasterized_layers: []
+  submission_file: ""
+  raster_panels_rgb_dpi: null
+source_data:
+  path: ""
+  data_dictionary: ""
+final_qa:
+  final_size_checked: false
+  preview_path: ""
+  visual_reviewed: false
+  legend_complete: false
+  reviewer: ""
