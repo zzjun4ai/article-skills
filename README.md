@@ -1,19 +1,9 @@
-# Scientific Skills
+# Article Skills
 
 This repository contains portable, production-oriented agent skills for scientific
-workflows. The current published skill is `data-to-nature-figure`, an evidence-led
+workflows. The current published skill is `article-figure`, an evidence-led
 workflow that profiles tabular data, recommends defensible charts, creates a
 traceable data-to-figure contract, and checks Nature-family figure delivery.
-
-## Repository layout
-
-```text
-skills/                 Published, self-contained skills
-templates/skill/        Source used by the skill generator
-.github/workflows/      CI equivalent of `make check`
-```
-
-Each skill must keep its required entrypoint at `skills/<name>/SKILL.md`. Optional `scripts/`, `references/`, and `assets/` directories belong inside that same skill.
 
 ## Design principles
 
@@ -24,18 +14,17 @@ Each skill must keep its required entrypoint at `skills/<name>/SKILL.md`. Option
 - Match prescriptiveness to risk and state scope boundaries.
 - Run the same checks locally and in CI.
 
-## Validate
-
-Run the skill checks from the repository root:
-
-```sh
-make check
-```
-
-See `AGENTS.md` for authoring rules and
-[`skills/data-to-nature-figure/SKILL.md`](skills/data-to-nature-figure/SKILL.md)
-for the complete workflow.
-
 ## License
 
 MIT License
+
+## TODO
+
+- [ ] Complete the `nature-figure` to `article-figure` migration: align the
+  `SKILL.md` frontmatter name, `Makefile` test path, and README links.
+- [ ] Implement and publish the remaining skill directories:
+  `article-citation`, `article-data`, `article-polishing`, `article-reader`,
+  `article-response`, `article-review`, and `article-writing`.
+- [ ] Add a contract test suite for each published skill and keep `make check`
+  green locally and in CI.
+- [ ] Add a concise README entry and usage example for every published skill.
