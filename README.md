@@ -1,9 +1,22 @@
 # Article Skills
 
 This repository contains portable, production-oriented agent skills for scientific
-workflows. The current published skill is `article-figure`, an evidence-led
-workflow that profiles tabular data, recommends defensible charts, creates a
-traceable data-to-figure contract, and checks Nature-family figure delivery.
+article workflows. Each skill keeps its behavior contract in `SKILL.md`, loads deeper
+references only when needed, and uses deterministic scripts for checks that should not
+depend on model judgment alone.
+
+## Published skills
+
+| Skill | Purpose |
+|---|---|
+| `article-figure` | Data-led chart selection, Matplotlib figures, image-guided style reproduction, vector export, and visual QA |
+| `article-citation` | Claim-to-source mapping, citation verification states, insertion, and bibliography audits |
+| `article-data` | Source-data packages, provenance, data availability, repository planning, and FAIR metadata |
+| `article-polishing` | Meaning-preserving copyediting, restructuring, translation, and protected-token checks |
+| `article-reader` | Source-grounded overview, focused reading, and full-paper bilingual readers |
+| `article-response` | Point-by-point reviewer/editor responses with revision and evidence tracking |
+| `article-review` | Bounded, evidence-grounded pre-submission and reviewer-style assessments |
+| `article-writing` | Claim-evidence-led manuscript planning, section drafting, and integrity checks |
 
 ## Design principles
 
@@ -18,13 +31,19 @@ traceable data-to-figure contract, and checks Nature-family figure delivery.
 
 MIT License
 
-## TODO
+## Validate
 
-- [ ] Complete the `nature-figure` to `article-figure` migration: align the
-  `SKILL.md` frontmatter name, `Makefile` test path, and README links.
-- [ ] Implement and publish the remaining skill directories:
-  `article-citation`, `article-data`, `article-polishing`, `article-reader`,
-  `article-response`, `article-review`, and `article-writing`.
-- [ ] Add a contract test suite for each published skill and keep `make check`
-  green locally and in CI.
-- [ ] Add a concise README entry and usage example for every published skill.
+Run all contract, link, and script tests from the repository root:
+
+```sh
+make check
+```
+
+## Reference
+
+This repository is an independent adaptation. Its compact routing, progressive disclosure, artifact-level QA, and figure template/preview review were informed by the following open-source projects; their code and assets remain under their respective licences. In particular, third-party PNG examples are treated as design references and are not redistributed here.
+
+- [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)
+- [google-deepmind/science-skills](https://github.com/google-deepmind/science-skills)
+- [Trae1ounG/paper-plot-skills](https://github.com/Trae1ounG/paper-plot-skills)
+- [Haojae/scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill), [scipilot-cite-skill](https://github.com/Haojae/scipilot-cite-skill), and [scipilot-writing-skill](https://github.com/Haojae/scipilot-writing-skill) 
